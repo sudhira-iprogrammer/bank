@@ -1,0 +1,84 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-10">
+      
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid" >
+          <span class="h5 p-1 ps-2 mt-2 pe-2" id="logo"><b>INDIAN BANK</b></span>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#" (click)="onLogged()">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2" id="leftLogo">
+      <span class="h5 p-1 ps-2 pe-2" id="logo"><b>INDIAN BANK</b></span>
+    </div>
+    <div class="col-md-6">
+      <div class="step-row mt-2 mb-2" id="stepr1"  *ngIf="!status">
+        <div class="progress"></div>
+        <!-- <div class="progress" [style.left]="myStyle"></div> -->
+        <div class="step-col"  [style.background-color]="myStyle1">Step 1 of 5</div>
+        <div class="step-col" [style.background-color]="myStyle2">Step 2 of 5</div>
+        <div class="step-col" [style.background-color]="myStyle3">Step 3 of 5</div>
+        <div class="step-col" [style.background-color]="myStyle4">Step 4 of 5</div>
+        <div class="step-col" [style.background-color]="myStyle5">Step 5 of 5</div>
+      </div>
+      <!-- <div class="step-row mt-2 mb-2" id="stepr2">
+        <div class="progress" [style.left]="myStyle1"></div>
+        <div class="step-col">Step 1</div>
+        <div class="step-col">Step 2</div>
+        <div class="step-col">Step 3</div>
+        <div class="step-col">Step 4</div>
+        <div class="step-col">Step 5</div>
+      </div> -->
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+     
+    </div>
+    <div class="col-md-6">
+      <!-- <app-step1></app-step1>
+      <app-step2></app-step2>
+      <app-step3></app-step3> -->
+
+      <div class="row mt-5" *ngIf="status">
+        <div class="col-md-6 text-secondary">
+          Reference No. : - <div class="display-6 text-dark" >{{verify.id}}</div>
+        </div>
+        <div class="col-md-6 mt-4">
+          <button id="viewApp" (click)="onView()">View Application</button>
+        </div>
+      </div>
+
+      <router-outlet></router-outlet>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+  <div class="row">
+    
+    <div class="col-md-12 text-end pe-5" id="footer2">
+      <button class="rounded-5" (click)="onClick()">Confirm ></button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 text-end pe-5" id="footer1">
+      <button class="rounded-5" (click)="onBack()" *ngIf="backBtn">
+        < Back
+      </button>
+    </div>
+  </div>
+</div>

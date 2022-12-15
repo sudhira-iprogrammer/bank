@@ -1,0 +1,135 @@
+<div id="title" class="rounded">
+  <b class="ps-3">Business Entity Details </b>
+</div>
+<div id="backColor" class="p-4 rounded">
+  <div class="row small">
+    <div class="col-md-6">
+      Name of Business <span class="text-danger">*</span> <br />
+      <input type="text" class="rounded form-control" [(ngModel)]="businessEntityDetails.nameOfBusiness" />
+      <br />
+    </div>
+    <div class="col-md-6">
+      Date of Incorporation <span class="text-danger">*</span> <br />
+      <input type="date" class="rounded form-control" [(ngModel)]="businessEntityDetails.dateOfIncorporation" />
+      <br />
+    </div>
+  </div>
+
+  <div class="row small">
+    <div class="col-md-6">
+      Type of Activity <span class="text-danger">*</span> <br />
+      <select
+        class="form-select form-select-md mb-3"
+        aria-label=".form-select-lg example"
+        [(ngModel)]="businessEntityDetails.typeOfActivity"
+      >
+        <option selected></option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      Business category <span class="text-danger">*</span> <br />
+      <select
+        class="form-select form-select-md mb-3"
+        aria-label=".form-select-lg example"
+        [(ngModel)]="businessEntityDetails.businessCategory"
+      >
+        <option selected></option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row small">
+    <div class="col-md-6">
+      Business Description <span class="text-danger">*</span> <br />
+      <input type="text" class="rounded form-control" [(ngModel)]="businessEntityDetails.businessDescription" />
+      <br />
+    </div>
+    <div class="col-md-6">
+      Business vintage (years) <span class="text-secondary">*</span> <br />
+      <input type="text" class="rounded form-control" [(ngModel)]="businessEntityDetails.businessVintage" />
+      <br />
+    </div>
+  </div>
+
+  <div class="row small">
+    <div class="col-md-6">
+      Udhyam registration no
+      <span class="text-secondary small">(Optional)</span> <br />
+      <input type="number" class="rounded form-control" [(ngModel)]="businessEntityDetails.udhyamRegistrationNo" /><br>
+    </div>
+    <div class="col-md-6">
+      PSL Classification <span class="text-secondary small">(Optional)</span>
+      <br />
+      <input type="text" class="rounded form-control" [(ngModel)]="businessEntityDetails.pslClassification"/>
+    </div>
+  </div>
+</div>
+
+<div id="title" class="rounded mt-3">
+  <b class="ps-3">Business Entity Address Details </b>
+</div>
+<div id="backColor" class="p-4 rounded">
+  <div class="row small">
+    <div class="col-md-6">
+      Shop No./Office No. <span class="text-danger">*</span> <br />
+      <input type="text" class="rounded form-control" [(ngModel)]="businessEntityAddressDetails.shopNo"/>
+      <br />
+    </div>
+    <div class="col-md-6">
+      Address line 1 <span class="text-danger">*</span> <br />
+      <input type="text" class="rounded form-control" [(ngModel)]="businessEntityAddressDetails.addrressLine1"/>
+      <br />
+    </div>
+  </div>
+
+  <div class="row small">
+    <div class="col-md-6">
+      Address line 2 <span class="text-secondary small">(Optional)</span> <br />
+      <input type="text" class="rounded form-control" [(ngModel)]="businessEntityAddressDetails.addrressLine2"/>
+      <br />
+    </div>
+    <div class="col-md-6">
+      Pincode <span class="text-danger">*</span> <br />
+      <input type="number" class="rounded form-control" [(ngModel)]="businessEntityAddressDetails.pincode"/>
+      <br />
+    </div>
+  </div>
+
+  <div class="row small">
+    <div class="col-md-6">
+      City <span class="text-secondary">*</span> <br />
+      <input type="text" class="rounded form-control" [(ngModel)]="businessEntityAddressDetails.city"/>
+      <br />
+    </div>
+    <div class="col-md-6">
+      State <span class="text-secondary">*</span> <br />
+      <input type="text" class="rounded form-control" [(ngModel)]="businessEntityAddressDetails.state"/>
+      <br />
+    </div>
+  </div>
+
+  <div class="row small">
+    <div class="col-md-6">
+      No of years at address <span class="text-danger">*</span> <br />
+      <input type="number" class="rounded form-control" [(ngModel)]="businessEntityAddressDetails.noOfYearsAtAddress"/> <br>
+    </div>
+    <div class="col-md-6">
+      Occupation of premise <span class="text-danger">*</span> <br />
+      <select
+        class="form-select form-select-md mb-3"
+        aria-label=".form-select-lg example"
+        [(ngModel)]="businessEntityAddressDetails.occupationOfPremise"
+      >
+        <option selected></option>
+        <option value="Rented">Rented</option>
+        <option value="Own">Own</option>
+      </select>
+    </div>
+  </div>
+</div>

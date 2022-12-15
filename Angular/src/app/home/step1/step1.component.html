@@ -1,0 +1,44 @@
+<div id="title" class="rounded">
+  <b class="ps-3">Basic Details</b>
+</div>
+<div id="backColor" class="p-4 rounded">
+  <div class="row small">
+    <div class="col-md-6">
+      Mobile Number <span class="text-secondary">*</span> <br />
+      <input
+        type="text"
+        [(ngModel)]="registration.phoneNumber"
+        disabled
+        class="rounded form-control"
+      />
+      <br />
+    </div>
+    <div class="col-md-6">
+      Enter PAN details <span class="text-secondary">*</span> <br />
+      <input
+        type="text"
+        [(ngModel)]="registration.panNumber"
+        disabled
+        class="rounded form-control"
+      />
+      <br />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      Requested Amount <span class="text-danger">*</span> <br />
+      <input
+        type="number"
+        [(ngModel)]="registration.requestedAmount"
+        class="rounded form-control"
+      />
+    </div>
+    <div class="col-md-6"></div>
+  </div>
+  <div class="row">
+    <small class="pt-2"
+      >Existing Bank Customers to ensure their NetBanking Credentials are
+      active</small
+    >
+  </div>
+</div>
